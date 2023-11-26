@@ -1,0 +1,39 @@
+<div class="welcome">
+  <h1>US Road Accidents Trends</h1>
+  <nav class="menu-bar">
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.link">{{ item.title }}</a>
+      </li>
+    </ul>
+  </nav>  
+  <p>Welcome to RoadAccidentsTrends! We provide comprehensive information and trends on road accidents in the United States from 2016 to 2023. <br>All of our queries have a common parameter which is time, it can be days, months or years. You may select any trend from below.</p>
+  <div class="trend-options">
+    <table>
+      <tr>
+        <td>
+          <button (click)="navigateTo('WeatherLocation')">Trend on accidents at selected locations within specified weather condition</button>
+        </td>
+        <td>
+          <button (click)="navigateTo('AgeTime')">Trend on accidents by different age groups at different times of the day</button>
+        </td>
+      </tr> 
+      <tr>
+        <td>
+          <button (click)="navigateTo('Maryland')">Trend on Accidents in Maryland due to selected traffic violations</button>
+        </td>
+        <td>
+          <button (click)="navigateTo('CarModel')">Trend on car brands and models involved in accidents</button>
+        </td>
+      </tr>  
+      <tr>
+        <td>
+          <button (click)="navigateTo('Covid')">Trend on effect of COVID cases on road accidents</button>
+        </td>
+        <td>
+          <button (click)="navigateTo('simple-info')">Simple information on number of accidents within selected timeframe and location</button>
+        </td>
+      </tr>
+    </table> 
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="welcome">
+    <h1>US Road Accidents Trends</h1>
+    <nav class="menu-bar">
+      <ul>
+        <li *ngFor="let item of menuItems">
+          <a [routerLink]="item.link">{{ item.title }}</a>
+        </li>
+      </ul>
+    </nav>  
+    <div class="optionList">
+        <form #ageTime="ngForm" (ngSubmit)="onSubmit(ageTime.value)">
+            <label>Choose From Age</label>
+            <select class="optionStyle" name="fromAge" ngModel>
+            <option *ngFor="let ageGroup of ageGroups" [value]="ageGroup">
+              {{ ageGroup }}
+            </select>
+            <label>Choose To Age</label>
+            <select class="optionStyle" name="toAge" ngModel>
+            <option *ngFor="let ageGroup of ageGroups" [value]="ageGroup">
+              {{ ageGroup }}
+            </select>
+            <label>Choose time of the day</label>
+            <select class="optionStyle" name="timeOfDay" ngModel>
+            <option *ngFor="let time of times" [value]="time">
+                {{time}}
+            </select>
+            <br>
+            From Date: <input type="date" class="optionStyle" name="fromDate" ngModel>
+            To Date: <input type="date" class="optionStyle" name="toDate" ngModel>
+            <button type="submit">Get Trends</button>
+        </form>
+    </div>
+  </div>
+  

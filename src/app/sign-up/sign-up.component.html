@@ -1,0 +1,14 @@
+<div class="SignUp">
+    <div class="signin-container">
+        <h2>SignUp</h2>
+        <form action="/submit-your-login-form" method="post">
+          <input type="text" id="username" name="username" placeholder="Username" required>
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+          <button type="submit" class="button">SignUp</button>
+        </form>
+        <div class="register">
+            <button (click)="navigateToLogIn()">Click here to Login</button>
+        </div>
+      </div>
+</div>

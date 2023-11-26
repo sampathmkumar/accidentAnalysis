@@ -1,0 +1,29 @@
+<div class="welcome">
+    <h1>US Road Accidents Trends</h1>
+    <nav class="menu-bar">
+      <ul>
+        <li *ngFor="let item of menuItems">
+          <a [routerLink]="item.link">{{ item.title }}</a>
+        </li>
+      </ul>
+    </nav>  
+    <div class="optionList">
+        <form #carModel="ngForm" (ngSubmit)="onSubmit(carModel.value)">
+            <label>Choose Car Brand</label>
+            <select class="optionStyle" name="carMake" (change)="onSelection($event)" ngModel>
+            <option *ngFor="let brand of carBrands" [value]="brand">
+              {{ brand }}
+            </select>
+            <label>Choose model of the car</label>
+            <select class="optionStyle" name="carModel" ngModel>
+            <option *ngFor="let model of models" [value]="model.value">
+                {{model.label}}
+            </select>
+        From Date: <input type="date" class="optionStyle" name="fromDate" ngModel>
+        To Date: <input type="date" class="optionStyle" name="toDate" ngModel><br>
+        <pre></pre>
+        <button type="submit">Get Trends</button>
+        </form>
+    </div>
+  </div>
+  

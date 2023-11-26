@@ -1,0 +1,40 @@
+<div class="welcome">
+    <h1>US Road Accidents Trends</h1>
+    <nav class="menu-bar">
+      <ul>
+        <li *ngFor="let item of menuItems">
+          <a [routerLink]="item.link">{{ item.title }}</a>
+        </li>
+      </ul>
+    </nav>  
+    <div class="optionList">
+        <form #weatherLoc="ngForm" (ngSubmit)="onSubmit(weatherLoc.value)">
+            <label>Choose State/City/Zip</label>
+            <select class="optionStyle" name="location" placeholder="State/City/Zip" (change)="onSelection($event)" ngModel>
+                <option *ngFor="let option of options" [value]="option.value">
+                  {{ option.label }}
+            </select>
+            <label>Location Value</label>
+            <select class="optionStyle" name="locationValue" ngModel>
+                <option *ngFor="let location of locationValues" [value]="location">
+                    {{location}}
+            </select>
+            <label>Choose Weather Condition</label>
+            <select class="optionStyle" name="weatherCondition" ngModel>
+                <option *ngFor="let weather of weathers" [value]="weather.value"> 
+                    {{ weather.label }}
+            </select>
+            <br>
+            From Date: <input type="date" class="optionStyle" name="fromDate" ngModel>
+            To Date: <input type="date" class="optionStyle" name="toDate" ngModel>
+            <button type="submit">Get Trends</button>
+        </form>
+    </div>
+    <div class="charts">
+        <div class="line" [chart]="lineChart">
+
+        </div>
+    </div>
+  </div>
+  
+  

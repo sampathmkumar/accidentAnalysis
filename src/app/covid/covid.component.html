@@ -1,0 +1,18 @@
+<div class="welcome">
+    <h1>US Road Accidents Trends</h1>
+    <nav class="menu-bar">
+      <ul>
+        <li *ngFor="let item of menuItems">
+          <a [routerLink]="item.link">{{ item.title }}</a>
+        </li>
+      </ul>
+    </nav>  
+    <div class="optionList">
+        <form #covid="ngForm" (ngSubmit)="onSubmit(covid.value)">
+            From Date: <input type="date" class="optionStyle" name="fromDate" ngModel>
+            To Date: <input type="date" class="optionStyle" name="toDate" ngModel>
+            <button type="submit">Get Trends</button>
+        </form>
+    </div>
+  </div>
+  

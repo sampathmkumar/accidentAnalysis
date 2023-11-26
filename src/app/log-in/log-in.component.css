@@ -1,0 +1,60 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login-container {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 30%;
+  margin-top: 20%;
+  margin-left: 35%;
+}
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.button {
+  background-color: #2f312f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.register {
+  text-align: center;
+  margin-top: 20px;
+}
+.register a {
+  text-decoration: none;
+  color: #6c63ff;
+}
+
+.Login {
+  background-color: #f7eee1;
+  position: absolute;  /* or 'fixed' if you want it to stay in place on scrolling */
+  top: 0;
+  left: 0;
+  width: 100vw;   /* Viewport width */
+  height: 100vh;  /* Viewport height */
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,62 @@
+.welcome {
+    text-align: center;
+    background-color: #f7eee1;
+    position: absolute;  /* or 'fixed' if you want it to stay in place on scrolling */
+    top: 0;
+    left: 0;
+    width: 100vw;   /* Viewport width */
+    height: 100vh;  /* Viewport height */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .trend-options button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-left: 85%;
+  }
+  
+  .menu-bar {
+    background-color: #333; /* Dark background for the menu bar */
+    overflow: hidden;
+  }
+  
+  .menu-bar ul {
+    list-style-type: none; /* No bullets */
+    margin: 0;
+    padding: 0;
+    margin-left: 25%;
+  }
+  
+  .menu-bar li {
+    float: left;
+  }
+  
+  .menu-bar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the color of links on hover */
+  .menu-bar li a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .optionList{
+    margin-top: 5%;
+  }
+
+  .optionStyle{
+    margin-right: 50px;
+    margin-bottom: 70px;
+  }
+  
+  
