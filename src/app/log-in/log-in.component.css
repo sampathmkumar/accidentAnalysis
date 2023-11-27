@@ -13,8 +13,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   width: 30%;
-  margin-top: 20%;
-  margin-left: 35%;
+  margin-top: 15%;
+  margin-left: 33%;
 }
 h2 {
   text-align: center;
@@ -50,6 +50,7 @@ input {
 
 .Login {
   background-color: #f7eee1;
+  text-align: center;
   position: absolute;  /* or 'fixed' if you want it to stay in place on scrolling */
   top: 0;
   left: 0;

@@ -21,8 +21,8 @@ export class LoginComponent{
     password: new FormControl('', [Validators.required])
   });
 
-  navigateToWelcome() {
-    console.log("Clicked");
+  navigateToWelcome(data: any) {
+    console.log(data);
     this.router.navigate(['/Welcome']);
   }
 }
