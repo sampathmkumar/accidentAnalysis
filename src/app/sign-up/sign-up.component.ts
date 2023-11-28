@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,6 +11,9 @@ export class SignUpComponent {
 
   constructor(private router: Router, private http: HttpClient) { }
 
+  signUpResponse: String[]=[];
+
+  private apiUrl='localhost:8080/api/users/signup'
   navigateToLogIn() {
     console.log("Clicked");
     this.router.navigate(['/logIn']);
@@ -19,7 +21,10 @@ export class SignUpComponent {
 
   onSubmit(data: any) {
     if(data.password === data.confirmPassword){
-      console.log(data);
+      this.http.post<string[]>(this.apiUrl,data)
+      .subscribe((result)=>
+        this.signUpResponse = result);
+        console.log(this.signUpResponse);
     }
   }
 }
